@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | Nifty 50 Stock Analyzer</title>
+  <meta name="description" content="Explore guides, strategies, and tutorials on Nifty 50 technical analysis, trading, investing, and forecasting." />
+  <link rel="canonical" href="https://nifty50stockanalyzer.in/blog.html" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <nav>
+      <a href="index.html">Home</a> · 
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main class="wrap" style="padding:20px">
+    <h1>Nifty 50 Blog</h1>
+    <p class="muted">Educational guides and insights for traders, investors, and students.</p>
+
+    <div class="grid cols-3">
+      <article class="card" style="padding:16px">
+        <h3><a href="blog/what-is-nifty-50.html">What is the Nifty 50 and Why Does It Matter?</a></h3>
+        <p class="muted">Understand India’s most important stock index and why traders watch it closely.</p>
+      </article>
+      <article class="card" style="padding:16px">
+        <h3><a href="blog/candlestick-guide.html">The Ultimate Guide to Candlestick Charts</a></h3>
+        <p class="muted">Learn how to read candlestick charts for Nifty 50 stocks with examples.</p>
+      </article>
+      <!-- Repeat similar blocks for all 20 blogs -->
+    </div>
+  </main>
+
+  <footer class="wrap" style="padding:20px">
+    <small class="muted">© <span id="year"></span> Nifty 50 Stock Analyzer</small>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
