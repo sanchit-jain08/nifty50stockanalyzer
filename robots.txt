@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.https://sanchit-jain08.github.io/nifty50stockanalyzer/sitemap.xml
+Sitemap: https://nifty50stockanalyzer.in/sitemap.xml
