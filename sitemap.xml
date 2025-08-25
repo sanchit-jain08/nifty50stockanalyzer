@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.https://sanchit-jain08.github.io/nifty50stockanalyzer/</loc>
+    <loc>https://nifty50stockanalyzer.in/</loc>
     <lastmod>2025-08-14</lastmod>
     <priority>1.00</priority>
-    <changefreq>hourly</changefreq>
+    <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.https://sanchit-jain08.github.io/nifty50stockanalyzer/privacy-policy.html</loc>
+    <loc>https://nifty50stockanalyzer.in/privacy.html</loc>
     <lastmod>2025-08-14</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://www.https://sanchit-jain08.github.io/nifty50stockanalyzer/contact.html</loc>
+    <loc>https://nifty50stockanalyzer.in/contact.html</loc>
+    <lastmod>2025-08-14</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://nifty50stockanalyzer.in/about.html</loc>
+    <lastmod>2025-08-14</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://nifty50stockanalyzer.in/disclaimer.html</loc>
     <lastmod>2025-08-14</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
