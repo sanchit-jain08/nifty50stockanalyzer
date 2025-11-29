@@ -30,4 +30,10 @@
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url>
+    <loc>https://nifty50stockanalyzer.in/Blogs/MACD_Guide.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
