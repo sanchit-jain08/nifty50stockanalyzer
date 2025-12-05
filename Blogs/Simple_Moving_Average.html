@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Moving Average (SMA) — Nifty 50 Stock Analyzer Blog</title>
+
+  <meta name="description"
+    content="A complete beginner-friendly guide to Simple Moving Average (SMA) and how traders use short-term and long-term SMA lines for trend identification and trade execution." />
+  <meta name="keywords"
+    content="SMA, Simple Moving Average, moving average strategy, Golden Cross, Death Cross, trading indicators, stock analysis, Nifty 50" />
+
+  <link rel="canonical" href="https://nifty50stockanalyzer.in/blog-sma.html" />
+  <link rel="icon" href="Thumnail.jpeg" type="jpeg">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2985729562275145"
+    crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://www.googletagservices.com" crossorigin>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://app.powerbi.com" crossorigin>
+
+  <link rel="dns-prefetch" href="https://www.googletagservices.com">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://app.powerbi.com">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Simple Moving Average (SMA) — Nifty 50 Stock Analyzer">
+  <meta property="og:description"
+    content="Learn what SMA is, how to calculate it, and how to use short-term & long-term SMA lines in trading with real examples.">
+  <meta property="og:url" content="https://nifty50stockanalyzer.in/blog-sma.html">
+  <meta property="og:image" content="https://nifty50stockanalyzer.in/Thumnail.jpeg">
+
+  <style>
+    :root {
+      --max: 1200px;
+      --accent: #0f766e;
+      --bg: #0b1020;
+      --card: #111831;
+      --text: #e6edf6;
+      --muted: #a9b1bb
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+      background: #0b1020;
+      color: var(--text)
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(160%) blur(6px);
+      background: rgba(11, 16, 32, .7);
+      border-bottom: 1px solid #1b2442;
+      z-index: 10
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: auto;
+      padding: 0 16px
+    }
+
+    .row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 8px
+    }
+
+    nav a:hover {
+      color: #fff
+    }
+
+    h1 {
+      font-size: clamp(28px, 3vw, 40px);
+      line-height: 1.1;
+      margin: 0
+    }
+
+    p.lead {
+      color: var(--muted);
+      font-size: clamp(14px, 2vw, 18px)
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #1b2442;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25)
+    }
+
+    .read-more-link {
+      display: inline-block;
+      margin-top: 18px;
+      background: transparent;
+      border: 1px solid #1b2442;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none
+    }
+
+    .ad-sidebar {
+      position: fixed;
+      top: 100px;
+      width: 160px;
+      height: auto;
+    }
+
+    .ad-left {
+      left: 10px;
+    }
+
+    .ad-right {
+      right: 10px;
+    }
+
+    @media(max-width: 1100px) {
+      .ad-sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap">
+      <div class="row" style="padding:14px 0">
+        <a href="https://nifty50stockanalyzer.in/" aria-label="Home"
+          style="display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 3v18h18" stroke="#14b8a6" stroke-width="2" />
+            <path d="M7 15l3-4 3 3 4-6 3 4" stroke="#e6edf6" stroke-width="2" />
+          </svg>
+          <strong>Nifty 50 Stock Analyzer</strong>
+        </a>
+        <nav>
+          <a href="https://nifty50stockanalyzer.in/#dashboard">Dashboard</a>
+          <a href="https://nifty50stockanalyzer.in/#insights">Features</a>
+          <a href="https://nifty50stockanalyzer.in/#faq">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap blog">
+    <article class="card post" style="max-width:900px;margin:auto">
+
+      <h1>Simple Moving Average (SMA): Complete Beginner-Friendly Guide</h1>
+      <p class="post-meta">By Nifty 50 Stock Analyzer · Updated:
+        <time datetime="2025-12-05">December 05, 2025</time>
+      </p>
+
+      <p class="lead">
+        The Simple Moving Average (SMA) is one of the most basic yet powerful tools in technical analysis.
+        If you are new to stock trading, SMA is the perfect starting indicator to understand trends,
+        reversals and entry/exit signals. In this blog we will explore how SMA works, how to use short-term
+        & long-term SMA lines, strategies, examples and real trading applications.
+      </p>
+
+      <img src="SMA_Guide_Image.png" alt="SMA Blog Image"
+        style="width:100%;border-radius:12px;margin:20px 0;">
+
+      <h2>What is a Simple Moving Average (SMA)?</h2>
+      <p>
+        SMA is the average closing price of a stock over a specific number of days.
+        For example:
+      </p>
+
+      <p><b>10-Day SMA</b> = Average closing price of last 10 days</p>
+
+      <p>
+        If the price is above SMA → trend is bullish.  
+        If the price is below SMA → trend is weakening or bearish.
+      </p>
+
+      <hr>
+
+      <h2>How to calculate SMA? (Simple Example)</h2>
+
+      <p>Suppose the last 5 closing prices of a stock are:</p>
+
+      <ul>
+        <li>Day 1: ₹100</li>
+        <li>Day 2: ₹102</li>
+        <li>Day 3: ₹104</li>
+        <li>Day 4: ₹103</li>
+        <li>Day 5: ₹105</li>
+      </ul>
+
+      <p><b>5-Day SMA = (100 + 102 + 104 + 103 + 105) ÷ 5 = 102.8</b></p>
+
+      <p>
+        Now on charts, SMA moves with price.  
+        When price jumps, SMA curves upward.  
+        When price falls, SMA gradually bends down.
+      </p>
+
+      <hr>
+
+      <h2>Short-Term & Long-Term SMA – What's the difference?</h2>
+
+      <p><b>Short-Term SMA</b> → 5-day, 10-day, 20-day (quick reactions to price)
+        <br><b>Long-Term SMA</b> → 50-day, 100-day, 200-day (used for trend direction)
+      </p>
+
+      <p>Short-term SMA shows trend momentum.</p>
+      <p>Long-term SMA shows trend direction & strength.</p>
+
+      <img src="SMA_Timeframes.png" alt="Short-Term and Long-Term SMA Example"
+        style="width:100%;border-radius:12px;margin:20px 0;">
+
+      <hr>
+
+      <h2>How traders use SMA to trade?</h2>
+
+      <p><b>1. Golden Cross (Buy Signal)</b></p>
+      <ul>
+        <li>50-day SMA crosses above 200-day SMA</li>
+        <li>Indicates long-term uptrend strength</li>
+      </ul>
+
+      <p><b>2. Death Cross (Sell Signal)</b></p>
+      <ul>
+        <li>50-day SMA crosses below 200-day SMA</li>
+        <li>Signals weakness and downtrend possibility</li>
+      </ul>
+
+      <hr>
+
+      <h2>Using SMA for Nifty 50 Stocks</h2>
+
+      <p>
+        Nifty 50 stocks move smoothly due to high liquidity, making SMA very effective.
+        Traders commonly use:
+      </p>
+      <ul>
+        <li>20-50 SMA for swing trades</li>
+        <li>50-200 SMA for long-term investing</li>
+      </ul>
+
+      <p>
+        On weekly charts, SMA reduces noise even further and helps identify strong long-term trends.
+      </p>
+
+      <hr>
+
+      <h2>Limitations of SMA</h2>
+
+      <p><b>1. SMA is slow in fast-moving markets</b> — it reacts after price moves.</p>
+      <p><b>2. Sideways markets produce false signals</b>.</p>
+      <p><b>3. Not for intraday scalping alone</b> — better when combined with RSI, volume or MACD.</p>
+
+      <p style="font-style:italic;color:var(--muted)">
+        Note: This content is educational, not financial advice. Always research before investing.
+      </p>
+
+      <a class="read-more-link" href="https://nifty50stockanalyzer.in/">
+        Try our Live Nifty 50 Dashboard — Free Technical Charts
+      </a>
+
+    </article>
+  </main>
+
+  <div class="ad-sidebar ad-left">
+    <ins class="adsbygoogle" style="display:block;width:160px;height:600px"
+      data-ad-client="ca-pub-2985729562275145" data-ad-slot="1111111111"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="ad-sidebar ad-right">
+    <ins class="adsbygoogle" style="display:block;width:160px;height:600px"
+      data-ad-client="ca-pub-2985729562275145" data-ad-slot="2222222222"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <footer class="wrap" style="padding:24px 0">
+    <div class="row">
+      <small class="muted">© <span id="year"></span> Nifty 50 Stock Analyzer. All rights reserved.</small>
+      <div>
+        <a href="privacy.html" class="muted">Privacy Policy</a>
+        <span class="muted"> · </span>
+        <a href="contact.html" class="muted">Contact</a>
+        <span class="muted"> · </span>
+        <a href="disclamer.html" class="muted">Disclamer</a>
+        <span class="muted"> · </span>
+        <a href="about.html" class="muted">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js').catch(() => { });
+      });
+    }
+  </script>
+
+</body>
+</html>
